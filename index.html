@@ -3,69 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ShoreSquad - Rally your crew for beach cleanups">
-    <title>ShoreSquad - Beach Cleanup Community</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Preconnect to required domains for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>PC Parts Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <header class="main-header">
-        <nav class="nav-container">
-            <div class="logo">
-                <h1>ShoreSquad</h1>
-            </div>
-            <div class="nav-links">
-                <a href="#map">Map</a>
-                <a href="#events">Events</a>
-                <a href="#weather">Weather</a>
-                <a href="#join" class="cta-button">Join Squad</a>
-            </div>
-        </nav>
+<body>    <nav>
+        <div class="nav-logo">PC Parts Guide</div>
+        <ul class="nav-links">
+            <li><a href="pages/cpu.html">CPU</a></li>
+            <li><a href="pages/gpu.html">GPU</a></li>
+            <li><a href="pages/ram.html">RAM</a></li>
+            <li><a href="pages/storage.html">Storage</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Welcome to PC Parts Guide</h1>
+        <p>Your one-stop resource for computer hardware information</p>
     </header>
 
     <main>
-        <section id="hero" class="hero-section">
-            <h2>Rally Your Crew for Cleaner Shores</h2>
-            <p>Join the movement to keep our beaches clean while connecting with like-minded people</p>
-            <button class="primary-button">Find Cleanup Events</button>
-        </section>
-
-        <section id="map" class="map-section">
-            <h2>Beach Cleanup Map</h2>
-            <div id="cleanup-map" class="map-container">
-                <!-- Map will be inserted here via JavaScript -->
+        <section id="cpu" class="component-section">
+            <h2>CPU (Central Processing Unit)</h2>
+            <div class="component-info">
+                <img src="images/cpu.png" alt="CPU Image">
+                <div class="component-details">
+                    <p>The CPU is the brain of your computer, handling most calculations and processing tasks.</p>
+                    <h3>Popular CPUs:</h3>
+                    <ul>
+                        <li>Intel Core i9-13900K</li>
+                        <li>AMD Ryzen 9 7950X</li>
+                        <li>Intel Core i7-13700K</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section id="weather" class="weather-section">
-            <h2>Beach Weather</h2>
-            <div class="weather-container">
-                <!-- Weather info will be populated via JavaScript -->
+        <section id="gpu" class="component-section">
+            <h2>GPU (Graphics Processing Unit)</h2>
+            <div class="component-info">
+                <img src="images/gpu.png" alt="GPU Image">
+                <div class="component-details">
+                    <p>The GPU handles graphics processing and is crucial for gaming and content creation.</p>
+                    <h3>Popular GPUs:</h3>
+                    <ul>
+                        <li>NVIDIA RTX 4090</li>
+                        <li>AMD Radeon RX 7900 XTX</li>
+                        <li>NVIDIA RTX 4080</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="ram" class="component-section">
+            <h2>RAM (Random Access Memory)</h2>
+            <div class="component-info">
+                <img src="images/ram.png" alt="RAM Image">
+                <div class="component-details">
+                    <p>RAM is your computer's short-term memory, crucial for running programs and multitasking.</p>
+                    <h3>Popular RAM Types:</h3>
+                    <ul>
+                        <li>DDR5 RAM</li>
+                        <li>DDR4 RAM</li>
+                        <li>Gaming RAM with RGB</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="storage" class="component-section">
+            <h2>Storage Devices</h2>
+            <div class="component-info">
+                <img src="images/storage.png" alt="Storage Image">
+                <div class="component-details">
+                    <p>Storage devices keep your data safe and accessible.</p>
+                    <h3>Popular Storage Types:</h3>
+                    <ul>
+                        <li>NVMe SSDs</li>
+                        <li>SATA SSDs</li>
+                        <li>Hard Disk Drives (HDD)</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>ShoreSquad</h3>
-                <p>Making beach cleanup fun and connected</p>
-            </div>
-            <div class="footer-section">
-                <h3>Connect</h3>
-                <a href="#social">Instagram</a>
-                <a href="#social">Twitter</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 ShoreSquad. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2025 PC Parts Guide. All rights reserved.</p>
     </footer>
 
-    <script src="js/app.js" type="module"></script>
+    <a href="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/03/01/20250703015406-9G0S5ZBA.json" target="_blank" class="chat-bubble">
+        <i class="fas fa-comments"></i>
+    </a>
+
+    <script src="app.js"></script>
 </body>
 </html>
