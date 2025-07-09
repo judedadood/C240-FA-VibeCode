@@ -112,13 +112,8 @@
     <script>
     const chatBubble = document.getElementById('chatBubble');
     const chatPopup = document.getElementById('chatPopup');
-    const closeChatPopup = document.getElementById('closeChatPopup');
     chatBubble.addEventListener('click', function() {
         chatPopup.style.display = 'block';
-    });
-    closeChatPopup.addEventListener('click', function(e) {
-        chatPopup.style.display = 'none';
-        e.stopPropagation();
     });
     // Optional: Close popup if user clicks outside
     document.addEventListener('click', function(e) {
