@@ -100,10 +100,32 @@
         <p>&copy; 2025 PC Parts Guide. All rights reserved.</p>
     </footer>
 
-    <a href="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/03/01/20250703015406-9G0S5ZBA.json" target="_blank" class="chat-bubble">
+    <div class="chat-bubble" id="chatBubble">
+        <span class="chat-bubble-text">Need any help?</span>
         <i class="fas fa-comments"></i>
-    </a>
+    </div>
+    <div id="chatPopup" style="display:none; position:fixed; bottom:100px; right:30px; width:370px; height:540px; z-index:2000; box-shadow:0 4px 24px rgba(0,0,0,0.25); border-radius:16px; overflow:hidden; background:#fff;">
+        <iframe src="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/03/01/20250703015406-9G0S5ZBA.json" style="width:100%;height:100%;border:none;"></iframe>
+    </div>
 
     <script src="app.js"></script>
+    <script>
+    const chatBubble = document.getElementById('chatBubble');
+    const chatPopup = document.getElementById('chatPopup');
+    const closeChatPopup = document.getElementById('closeChatPopup');
+    chatBubble.addEventListener('click', function() {
+        chatPopup.style.display = 'block';
+    });
+    closeChatPopup.addEventListener('click', function(e) {
+        chatPopup.style.display = 'none';
+        e.stopPropagation();
+    });
+    // Optional: Close popup if user clicks outside
+    document.addEventListener('click', function(e) {
+        if (chatPopup.style.display === 'block' && !chatPopup.contains(e.target) && e.target !== chatBubble && !chatBubble.contains(e.target)) {
+            chatPopup.style.display = 'none';
+        }
+    });
+    </script>
 </body>
 </html>
