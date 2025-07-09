@@ -6,8 +6,203 @@
     <title>PC Parts Guide</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Poppins', 'Roboto', 'Helvetica Neue', Arial, sans-serif; }
+      .ai-hero {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        min-height: 100vh;
+        background: linear-gradient(120deg, #181828 0%, #23234a 100%);
+      }
+      .ai-hero-content {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4vw 6vw;
+        z-index: 2;
+      }
+      .ai-hero-content h1 {
+        font-size: 2.8rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        color: #fff;
+      }
+      .ai-hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+        color: #e0e0e0;
+        max-width: 500px;
+      }
+      .ai-hero-content .ai-hero-btn {
+        display: inline-block;
+        padding: 0.9em 2.2em;
+        border: 2px solid #fff;
+        background: transparent;
+        color: #fff;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        outline: none;
+        text-decoration: none;
+        box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+      }
+      .ai-hero-content .ai-hero-btn:focus,
+      .ai-hero-content .ai-hero-btn:hover {
+        background: #fff;
+        color: #23234a;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+      }
+      .ai-hero-visual {
+        flex: 1 1 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: none;
+        min-height: 350px;
+      }
+      .ai-hero-visual img {
+        max-width: 90%;
+        max-height: 70vh;
+        border-radius: 24px;
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+        background: #23234a;
+        object-fit: cover;
+      }
+      @media (max-width: 900px) {
+        .ai-hero {
+          flex-direction: column;
+          min-height: unset;
+        }
+        .ai-hero-content, .ai-hero-visual {
+          flex: unset;
+          min-height: 320px;
+          padding: 2.5rem 1.5rem;
+        }
+        .ai-hero-content {
+          padding-bottom: 0;
+        }
+      }
+      @media (max-width: 600px) {
+        .ai-hero-content h1 {
+          font-size: 2rem;
+        }
+        .ai-hero-content p {
+          font-size: 1rem;
+        }
+        .ai-hero-visual img {
+          max-width: 100%;
+          max-height: 40vh;
+        }
+      }
+      .ai-why-section {
+        background: #101014;
+        padding: 4rem 1.5rem 3rem 1.5rem;
+        text-align: center;
+      }
+      .ai-why-section h2 {
+        color: #fff;
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-bottom: 2.5rem;
+        letter-spacing: -0.5px;
+      }
+      .ai-why-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .ai-why-card {
+        background: #181828;
+        border-radius: 18px;
+        padding: 2.2rem 1.5rem 2rem 1.5rem;
+        flex: 1 1 0;
+        min-width: 220px;
+        max-width: 340px;
+        color: #fff;
+        box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+        transition: transform 0.18s, box-shadow 0.18s;
+        outline: none;
+      }
+      .ai-why-card:focus,
+      .ai-why-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+      }
+      .ai-why-card h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1.1rem;
+        color: #fff;
+      }
+      .ai-why-card p {
+        color: #e0e0e0;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+      @media (max-width: 900px) {
+        .ai-why-cards {
+          flex-direction: column;
+          gap: 1.5rem;
+          align-items: center;
+        }
+        .ai-why-card {
+          max-width: 500px;
+          width: 100%;
+        }
+      }
+      ::selection {
+        background: #23234a;
+        color: #fff;
+      }
+    </style>
 </head>
-<body>    <nav>
+<body>
+  <section class="ai-hero" aria-label="Hero">
+    <div class="ai-hero-content">
+      <h1>Your Trusted Partner for Advancing AI</h1>
+      <p>Accelerate AI breakthroughs with end-to-end computing solutions and strategic technology collaboration.</p>
+    </div>
+    <div class="ai-hero-visual">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Photo of PC hardware inside a computer case, showing motherboard, RAM, and GPU" />
+    </div>
+    <div class="ai-hero-arrow" style="position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:10;">
+      <a href="#ai-why-section" aria-label="Scroll down" style="display:inline-block;text-decoration:none;outline:none;">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="19" cy="19" r="19" fill="rgba(36,36,60,0.7)"/>
+          <path d="M12 17L19 24L26 17" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+  <section class="ai-why-section" id="ai-why-section" aria-label="Why Choose Us">
+    <h2>Why Choose Us</h2>
+    <div class="ai-why-cards">
+      <section class="ai-why-card" tabindex="0">
+        <h3>Comprehensive AI Solutions</h3>
+        <p>We offer computing solutions across the stack — from processing units to scalable platforms — tailored to your AI workloads.</p>
+      </section>
+      <section class="ai-why-card" tabindex="0">
+        <h3>Open and Flexible Ecosystem</h3>
+        <p>Our commitment to open standards and collaboration ensures seamless integration and future-proof deployment.</p>
+      </section>
+      <section class="ai-why-card" tabindex="0">
+        <h3>Innovation-Driven Performance</h3>
+        <p>We focus on delivering high efficiency, reliability, and performance — whether for the cloud, edge, or enterprise environments.</p>
+      </section>
+    </div>
+  </section>
+    <nav>
         <div class="nav-logo">PC Parts Guide</div>
         <ul class="nav-links">
             <li><a href="pages/cpu.html">CPU</a></li>
