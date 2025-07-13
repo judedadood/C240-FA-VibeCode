@@ -166,6 +166,65 @@
         color: #fff;
       }
     </style>
+    <style>
+        .telegram-section {
+            text-align: center;
+            padding: 2.5rem 4vw;
+            background: #f8f9fa;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 12px;
+        }
+
+        .telegram-content h2 {
+            font-size: 2.5rem;
+            color: #23234a;
+            margin-bottom: 1.5rem;
+        }
+
+        .telegram-content p {
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .telegram-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: #0088cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .telegram-button:hover {
+            background: #006699;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.2);
+        }
+
+        .telegram-button i {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .telegram-section {
+                padding: 2rem 1.5rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .telegram-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
   <section class="ai-hero" aria-label="Hero">
@@ -215,9 +274,21 @@
     </nav>
 
     <header class="hero">
+        <section class="telegram-section">
+            <div class="telegram-content">
+                <h2>Meet Your PC Build Assistant</h2>
+                <p>Get instant help with your PC build right from your phone! Our Telegram chatbot is available 24/7 to provide component recommendations, compatibility checks, and troubleshooting assistance. Whether you're building your first PC or upgrading your rig, expert advice is just a message away.</p>
+                <a href="https://t.me/BeU_Assistant_bot" class="telegram-button" target="_blank">
+                    <i class="fab fa-telegram-plane"></i>
+                    Chat Now on Telegram
+                </a>
+            </div>
+        </section>
         <h1>Welcome to BeU</h1>
         <p>Your one-stop resource for computer hardware information</p>
     </header>
+
+    
 
     <main>
         <a href="pages/cpu.html" style="text-decoration:none;color:inherit;">
